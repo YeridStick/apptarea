@@ -1,13 +1,285 @@
-body {
+/*Importamos la tipografia Poppins desde googel fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200&display=swap');
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='1000' preserveAspectRatio='none' viewBox='0 0 1440 1000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1144%26quot%3b)' fill='none'%3e%3cg transform='translate(0%2c 0)' stroke-linecap='round' stroke='url(%26quot%3b%23SvgjsLinearGradient1145%26quot%3b)'%3e%3cpath d='M219.5 291.555 L219.5 708.445' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M296.5 426.595 L296.5 573.405' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M373.5 382.835 L373.5 440.585' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M373.5 527.21 L373.5 617.165' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M450.5 199.085 L450.5 800.915' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M527.5 214.075 L527.5 329.575' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M527.5 416.2 L527.5 785.925' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M604.5 377.035 L604.5 434.785' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M604.5 521.4100000000001 L604.5 622.965' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M681.5 366.905 L681.5 424.655' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M681.5 511.28 L681.5 633.095' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M758.5 328.065 L758.5 671.935' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M835.5 423.955 L835.5 576.035' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M912.5 240.655 L912.5 471.655' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M912.5 558.28 L912.5 759.345' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M989.5 372.095 L989.5 627.905' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M1066.5 366.615 L1066.5 424.365' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M1066.5 510.99 L1066.5 633.385' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M1143.5 480.635 L1143.5 519.365' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M1220.5 315.075 L1220.5 372.825' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M1220.5 459.45 L1220.5 517.2' stroke-width='57.75'%3e%3c/path%3e%3cpath d='M1220.5 603.825 L1220.5 684.925' stroke-width='57.75'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1144'%3e%3crect width='1440' height='1000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='180' y1='500' x2='1260' y2='500' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1145'%3e%3cstop stop-color='%233a7cc3' offset='0'%3e%3c/stop%3e%3cstop stop-color='%23dd1133' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #13021e;
+  background-attachment: fixed;
+}
+body::-webkit-scrollbar{
+  width: 8px; /* Oculta las barras de desplazamiento en Chrome, Safari y Opera */
+  border-radius: 8px;
+}
+body::-webkit-scrollbar{
+  box-shadow: inset 0px 0px 20px #13021e;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: #4070f4;
+  border-radius: 8px;
+}
+.App{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Tareas{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.Logo{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Logo .Logo-img{
+  height: 70px;
+  object-fit: cover;
+}
+.Logo .Logo-name{
+  margin-top: 35px;
+  margin-left: -22px;
+  font-size: 40px;
+}
+.Logo .Logo-name,
+.Titulo{
+  color: #fff;
+}
+.Titulo{
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+.Tareas_agregadas{
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+}
+/*Implementar logica useEstate*/
+.container{
+  background-color: #00000061;
+  margin-top: 2rem;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 300px;
+  height: max-content;
+  backdrop-filter: blur(20px);
+  box-shadow: 0px 0px 10px #000;
+  border-radius: 12px;
+  transition: all .4s ease-in-out;
+}
+.Container_tittle{
+  color: #fff;
+}
+.container_open{
+  height: 70vh;
+  overflow: auto;
+}
+.container_close{
+  height: 20vh;
+  overflow-y: hidden;
+}
+/**/
+.sudcontainer_btn, .Icon {
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  align-items: center;
+}
+.sudcontainer_btn {
+  position: fixed !important;
+  bottom: 5px;
+  right: calc(100% -10px) !important;
+  transform: translateX(50%);
+  font-size: 50px;
+  border-radius: 45px;
+  background-color: #00000061;
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  padding: 4px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.Tareas_visibles{
+  margin: 1.5rem 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: max-content;
+  border-radius: 12px;
+  padding: 0.5rem;
+  backdrop-filter: blur(8px);
+  background-color: #0000002b;
+  transition: all .2s ease-in-out;
+}
+.Tarea_completada{
+  background-color: #1a69fd25;
+  backdrop-filter: blur(8px);
+  box-shadow: 0px 0px 20px #13021e;
+  text-decoration: line-through;
+  transition: all .4s ease-in-out;
+}
+.Tarea_colpmetada .Tarea_text .Tittle_tarea, 
+.Tarea_colpmetada .Tarea_text .Parrafo_tarea {
+  color: #13021e !important;
+  transition: all .4s ease-in-out;
+}
+.Container_tarea{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.Tarea_text{
+  width: 100%;
+  margin-left: 0.8rem;
+  padding-right: 0.2rem;
+}
+.Tarea_text .Tittle_tarea{
+  color: #fa104e;
+  font-size: 2rem;
+}
+.Tarea_text .Parrafo_tarea{
+  color: #ffffff;
+}
+.Parrafo_tarea{
+  width: calc(100% - 50px);
+}
+.Icon{
+  flex-direction: column;
+  font-size: 40px;
+  color: #fa104e;
+  top: 50%;
+  right: 6px;
+  transform: translateY(-50%);
+  height: 100%;
+  max-height: 100px;
+  justify-content: space-around;
+  transition: all .4s ease-in-out;
+}
+.Icon i{
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+.Icon i:hover{
+  color: #1a6afd;
+}
+.Formulario_ingreso{
+  margin: 1rem 0rem 1rem 0rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.container_button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 45px;
+  border-radius: 50px;
+}
+.enviar{
+  background-color: #1a6afd;
+}
+.eliminar{
+  background-color: #fa104e;
+}
+.Agregar{
+  font-size: 30px;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  border-radius: 40px;
+  margin: 0px 4px;
+}
+.Inputs{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 45px;
+  border-radius: 8px;
+}
+.Inputs input{
+  height: 40px;
+  margin: 0px 4px;
+  border-radius: 12px;
+  outline: none;
+  border: solid 2px #707070;
+}
+.Titulo{
+  flex: 1;
+  padding: 4px;
+  justify-content: flex-start;
+  text-align: left;
+  color: #fa104e90;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: solid 2px #fa104e90;
+  outline: none;
+}
+.Titulo::placeholder{
+  padding: 4px;
+  color: #fa104e90;
+  font-size: 18px;
+  font-weight: 600;
+}
+.Parrafo{
+  flex: 1;
+  padding: 4px;
+  justify-content: flex-start;
+  text-align: left;
+  color: #707070;
+  font-size: 18px;
+  font-weight: 600;
+}
+.Parrafo::placeholder{
+  padding: 4px;
+  color: #707070;
+  font-size: 18px;
+  font-weight: 600;
+}
+@media screen and (max-width: 1025px) {
+  .sudcontainer_btn{
+    position: none;
+    margin-top: 20px;
+    height: 14px;
+    transition: all .4s ease-in-out;
+  }
+  #Element_btn_verde{
+    width: 18px;
+    height: 18px;
+    margin: 2rem 8px 2rem 16px;
+  }
+  #Element_btn_morado{
+    width: 18px;
+    height: 18px;
+    margin: 2rem 16px 2rem 8px;
+  }
 }
